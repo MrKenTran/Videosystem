@@ -130,7 +130,15 @@ class MyApp extends PolymerElement {
           <app-header slot="header" condenses="" reveals="" effects="waterfall">
             <app-toolbar>
               <paper-icon-button icon="my-icons:menu" drawer-toggle=""></paper-icon-button>
-              <div main-title="">Velkommen til NTNUs videoopplastning</div>
+              <template is="dom-if" if="{{user.isAdmin}}">
+              <div main-title="">Velkommen til NTNUs videoopplastning Admin </div> 
+              </template>
+              <template is="dom-if" if="{{user.isTeacher}}">
+              <div main-title="">Velkommen til NTNUs videoopplastning Lærer </div> 
+              </template>
+              <template is="dom-if" if="{{user.isStudent}">
+              <div main-title="">Velkommen til NTNUs videoopplastning </div> 
+              </template>
               <user-status></user-status>
             </app-toolbar>
           </app-header>
