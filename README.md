@@ -37,9 +37,9 @@ Make sure you do not have any conflicting volumes, run : docker volume prune
 
 Download dependencies with npm, go into the www folder (on the host machine) and run: npm install
 
-First time usage, rebuild everything : docker-compose -d up --build
+First time usage, rebuild everything : docker-compose --build
 
-After that, start with : docker-compose -d up
+After that, start with : docker-compose up -d 
 
 Go to : http://localhost:8080 to view the page
 
