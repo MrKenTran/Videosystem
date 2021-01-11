@@ -131,14 +131,15 @@ class MyApp extends PolymerElement {
             <app-toolbar>
               <paper-icon-button icon="my-icons:menu" drawer-toggle=""></paper-icon-button>
               <template is="dom-if" if="{{user.isAdmin}}">
-              <div main-title="">Velkommen til NTNUs videoopplastning Admin </div> 
+              <div main-title="">Admin </div> 
               </template>
               <template is="dom-if" if="{{user.isTeacher}}">
-              <div main-title="">Velkommen til NTNUs videoopplastning Lærer </div> 
+              <div main-title="">Lærer </div> 
               </template>
-              <template is="dom-if" if="{{user.isStudent}">
+              <template is="dom-if" if="{{user.isStudent}}">
+              <div main-title="">Student </div> 
+              </template>
               <div main-title="">Velkommen til NTNUs videoopplastning </div> 
-              </template>
               <user-status></user-status>
             </app-toolbar>
           </app-header>
